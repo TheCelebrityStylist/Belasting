@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>De Vrijstelling — elke dag één wettige manier om minder erf- en schenkbelasting te betalen</title>
+<meta name="description" content="Dagelijkse tegenlezing van de Successiewet 1956. Actuele vrijstellingen, tarieven en strategieën om erf- en schenkbelasting wettig te beperken.">
+<link rel="stylesheet" href="stijl.css">
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-strip"><div class="wrap">
+    <span>Successiewet 1956 — tegenlezing</span>
+    <span>Editie 2026 · verschijnt dagelijks</span>
+  </div></div>
+  <div class="mast-inner wrap">
+    <h1><a href="index.html">DE VRIJSTELLING</a></h1>
+    <p class="sub">De Belastingdienst stuurt blauwe enveloppen. Wij sturen er <em>één terug</em> — elke dag één wettige manier om minder erf- en schenkbelasting te betalen.</p>
+  </div>
+</header>
+
+<section class="manifest wrap">
+  <h2>Erfbelasting is geen natuurwet. <span class="streep">Het is een keuze</span> — meestal de keuze om niets te plannen.</h2>
+  <p>Over vermogen dat u naar uw kinderen brengt, rekent de fiscus tot 20%. Naar kleinkinderen tot 36%. Naar wie geen familie is: tot 40%. Elke euro daarvan is legaal te beperken met instrumenten die gewoon in de wet staan. Dit blog leest de Successiewet zoals een advocaat een contract van de wederpartij leest: op zoek naar de ruimte.</p>
+</section>
+
+<section class="wrap" aria-label="Rekenformulier">
+  <div class="formulier">
+    <h3 class="form-kop">Wat kost níets doen?</h3>
+    <div class="form-grid">
+      <div class="veld">
+        <label for="vermogen">Na te laten vermogen (€)</label>
+        <input type="number" id="vermogen" value="1000000" min="0" step="10000">
+      </div>
+      <div class="veld">
+        <label for="kinderen">Aantal kinderen</label>
+        <select id="kinderen"><option>1</option><option selected>2</option><option>3</option><option>4</option></select>
+      </div>
+      <div class="veld">
+        <label for="jaren">Jaren om te schenken</label>
+        <select id="jaren"><option>5</option><option selected>10</option><option>15</option><option>20</option></select>
+      </div>
+    </div>
+    <div class="uitkomst">
+      <div class="stempel" id="stempel">terug naar de familie</div>
+      <div class="fiscus">
+        <div class="lbl">Erfbelasting bij niets doen</div>
+        <div class="cijfer" id="uit-niets">€ —</div>
+      </div>
+      <div class="u">
+        <div class="lbl">Besparing met jaarlijkse vrijstelling (€ 6.908 p/kind)</div>
+        <div class="cijfer" id="uit-besparing">€ —</div>
+      </div>
+    </div>
+    <p class="form-voet">Indicatie op basis van tarieven en vrijstellingen 2026 (kindtarief 10% tot € 158.669, daarboven 20%; kindvrijstelling € 26.230). Geen fiscaal of juridisch advies.</p>
+  </div>
+</section>
+
+<section class="dagen wrap">
+  <div class="kop">
+    <h3>Het archief</h3>
+    <span>één instrument per dag</span>
+  </div>
+
+  <a class="dag" href="artikelen/dag-003-bor.html">
+    <span class="nr">DAG 003</span>
+    <div>
+      <h4>De BOR: € 1.543.500 belastingvrij, en van de rest driekwart</h4>
+      <p>De bedrijfsopvolgingsregeling is de grootste vrijstelling in de hele Successiewet — en de meest onderschatte bij familiebedrijven met een holding.</p>
+    </div>
+    <span class="datum">16-07-2026</span>
+  </a>
+
+  <a class="dag" href="artikelen/dag-002-papieren-schenking.html">
+    <span class="nr">DAG 002</span>
+    <div>
+      <h4>Schenken op papier: weggeven wat u houdt</h4>
+      <p>Vermogen dat vastzit in stenen kan tóch elk jaar de nalatenschap verlaten. Eén notariële akte, één harde voorwaarde — en één klassieke fout.</p>
+    </div>
+    <span class="datum">15-07-2026</span>
+  </a>
+
+  <a class="dag" href="artikelen/dag-001-jaarlijkse-vrijstelling.html">
+    <span class="nr">DAG 001</span>
+    <div>
+      <h4>€ 6.908 per kind, per jaar — de vrijstelling die families laten liggen</h4>
+      <p>Het simpelste instrument van allemaal wordt het minst gebruikt. Waarom uitstel hier letterlijk 10 tot 20 cent per euro kost.</p>
+    </div>
+    <span class="datum">14-07-2026</span>
+  </a>
+</section>
+
+<footer class="voet">
+  <div class="wrap">
+    <div>
+      <strong>De Vrijstelling</strong>
+      Dagelijkse tegenlezing van de Successiewet 1956. Alle bedragen: belastingjaar 2026, bron Belastingdienst. Dit is algemene informatie, geen fiscaal of juridisch advies; raadpleeg voor uw situatie een notaris of belastingadviseur.
+    </div>
+    <div>
+      <strong>Colofon</strong>
+      Verschijnt elke dag.<br>Redactie: onafhankelijk.<br>Sympathie: bij de nabestaanden.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const f=n=>'€ '+Math.round(n).toLocaleString('nl-NL');
+  const VRIJ_KIND=26230, JAAR=6908, GRENS=158669;
+  function erfPerKind(deel){
+    const belast=Math.max(0,deel-VRIJ_KIND);
+    return Math.min(belast,GRENS)*.10+Math.max(0,belast-GRENS)*.20;
+  }
+  function reken(){
+    const V=Math.max(0,+document.getElementById('vermogen').value||0);
+    const K=+document.getElementById('kinderen').value;
+    const J=+document.getElementById('jaren').value;
+    const nietsDoen=erfPerKind(V/K)*K;
+    const geschonken=Math.min(V,JAAR*K*J);
+    const rest=V-geschonken;
+    const naPlan=erfPerKind(rest/K)*K;
+    const besparing=Math.max(0,nietsDoen-naPlan);
+    document.getElementById('uit-niets').textContent=f(nietsDoen);
+    document.getElementById('uit-besparing').textContent=f(besparing);
+    document.getElementById('stempel').style.opacity=besparing>0?1:.25;
+  }
+  ['vermogen','kinderen','jaren'].forEach(id=>document.getElementById(id).addEventListener('input',reken));
+  reken();
+})();
+</script>
+</body>
+</html>
