@@ -34,6 +34,7 @@ header.mast{border-bottom:3px double var(--inkt);background:var(--papier)}
 .mast h1 a{color:var(--inkt);text-decoration:none}
 .mast .sub{margin-top:.7rem;max-width:46ch;font-size:1.02rem;color:#3d4a54}
 .mast .sub em{font-style:normal;color:var(--rood);font-weight:600}
+.manifest-link{display:inline-block;margin-top:.9rem;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--rood);text-decoration:none;border-bottom:2px solid var(--rood);padding-bottom:2px}
 
 /* ── hero manifest ── */
 .manifest{padding:3.2rem 0 1rem}
