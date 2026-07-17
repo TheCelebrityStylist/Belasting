@@ -41,6 +41,15 @@ header.mast{border-bottom:3px double var(--inkt);background:var(--papier)}
 .manifest h2 .streep{background:linear-gradient(transparent 62%,rgba(200,53,46,.28) 62%)}
 .manifest p{margin-top:1rem;max-width:62ch;color:#3d4a54}
 
+/* ── aanklacht ── */
+.aanklacht{padding:0 0 1rem}
+.aanklacht-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--lijn);border:1px solid var(--lijn);border-radius:6px;overflow:hidden}
+@media(max-width:860px){.aanklacht-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.aanklacht-grid{grid-template-columns:1fr}}
+.aanklacht-item{background:#fff;padding:1.2rem 1.3rem}
+.a-cijfer{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:1.5rem;color:var(--rood);margin-bottom:.4rem}
+.aanklacht-item p{margin:0;font-size:.88rem;color:#3d4a54;max-width:none}
+
 /* ── rekenformulier (signatuur) ── */
 .formulier{
   margin:2.6rem 0 3.4rem;
