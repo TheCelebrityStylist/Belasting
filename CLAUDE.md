@@ -46,11 +46,11 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 ## Onderwerpenbank
 
 - [x] Dag 005 — Oostenrijk (gepubliceerd: dag-005-oostenrijk.html)
-- [ ] Dag 006 — De viervoudige heffing: volg één euro van loonstrook tot sterfbed
-- [ ] Dag 007 — Zweden schafte af onder links: waarom zelfs herverdelers haar lieten vallen
-- [ ] Dag 008 — "Geef dan eerder": hoe dezelfde wet het eigen tegenargument saboteert
-- [ ] Dag 009 — Zwitserland: welvarend, stabiel, kinderen erven belastingvrij
-- [ ] Dag 010 — De gemiddelde erfenis vs. de gemiddelde koopwoning: rekensom van een generatie
+- [x] Dag 006 — De viervoudige heffing (gepubliceerd: dag-006-viervoudige-heffing.html)
+- [x] Dag 007 — Zweden (gepubliceerd: dag-007-zweden-erfbelasting-afgeschaft.html)
+- [x] Dag 008 — "Geef dan eerder" (gepubliceerd: dag-008-belastingvrij-schenken-de-val.html)
+- [x] Dag 009 — Zwitserland (gepubliceerd: dag-009-zwitserland-erfbelasting.html)
+- [x] Dag 010 — De gemiddelde erfenis vs. de gemiddelde koopwoning (gepubliceerd: dag-010-gemiddelde-erfenis-nederland.html)
 - [ ] Dag 011 — Wie betaalt er werkelijk: vermijding aan de top, aanslagen in het midden
 - [ ] Dag 012 — De tweetrapsmaking (instrumenteel stuk, ter afwisseling)
 
@@ -91,7 +91,7 @@ Het weekstuk wordt gevonden via twee kanalen: zoekmachines (SEO) en AI-antwoordm
 - **Cijfers met bron in de tekst** ("volgens het CPB", "blijkens VfGH G 54/06") — bronloze claims worden door antwoordmachines genegeerd
 
 ### Domein
-Productiedomein: `https://www.devrijstelling.nl` (Vercel-project "belasting", team Elke's projects). Gebruik dit voor canonical tags, `og:url` en `sitemap.xml` — niet het `*.vercel.app`-preview-domein.
+Productiedomein: `https://devrijstelling.nl` (Vercel-project "belasting", team Elke's projects; `www.devrijstelling.nl` staat er ook op maar de site canonicaliseert naar de kale apex). Gebruik dit voor canonical tags, `og:url` en `sitemap.xml` — niet het `*.vercel.app`-preview-domein.
 
 ## Kwaliteitspoort (verplicht vóór elke commit)
 

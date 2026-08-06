@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.devrijstelling.nl/sitemap.xml
+Sitemap: https://devrijstelling.nl/sitemap.xml
