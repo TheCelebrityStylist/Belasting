@@ -51,7 +51,7 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 008 — "Geef dan eerder" (gepubliceerd: dag-008-belastingvrij-schenken-de-val.html)
 - [x] Dag 009 — Zwitserland (gepubliceerd: dag-009-zwitserland-erfbelasting.html)
 - [x] Dag 010 — De gemiddelde erfenis vs. de gemiddelde koopwoning (gepubliceerd: dag-010-gemiddelde-erfenis-nederland.html)
-- [ ] Dag 011 — Wie betaalt er werkelijk: vermijding aan de top, aanslagen in het midden
+- [x] Dag 011 — Wie betaalt er werkelijk (gepubliceerd: dag-011-erfbelasting-ontwijken-rijken.html)
 - [ ] Dag 012 — De tweetrapsmaking (instrumenteel stuk, ter afwisseling)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
