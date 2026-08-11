@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Erfbelasting berekenen 2026 — gratis en gedetailleerd</title>
-<meta name="description" content="Bereken de erfbelasting 2026 tot in detail: per erfgenaam, met woning (WOZ), spaargeld, beleggingen, ondernemingsvermogen (BOR), schulden én uw besparing bij een schenkplan.">
+<title>Erfbelasting berekenen 2026 — over beide overlijdens</title>
+<meta name="description" content="Bereken de erfbelasting 2026 over beide overlijdens: wettelijke verdeling, renteclausule, WOZ, BOR, schenkplan en marginale druk. Met deelbare link.">
 <link rel="canonical" href="https://devrijstelling.nl/erfbelasting-berekenen.html">
-<meta property="og:title" content="Erfbelasting berekenen 2026 — gratis en gedetailleerd">
-<meta property="og:description" content="Per erfgenaam, met woning (WOZ), BOR, schulden én uw besparing bij een schenkplan. Model DV-2026.">
+<meta property="og:title" content="Erfbelasting berekenen 2026 — over beide overlijdens">
+<meta property="og:description" content="Wettelijke verdeling, renteclausule, WOZ, BOR, schenkplan, marginale druk — over beide overlijdens.">
 <meta property="og:image" content="https://devrijstelling.nl/og/og-rekentool.png">
+<meta property="og:url" content="https://devrijstelling.nl/erfbelasting-berekenen.html">
 <link rel="stylesheet" href="stijl.css">
 <style>
 .reken{background:#fff;border:1px solid var(--lijn);border-top:14px solid var(--envelop);border-radius:6px;box-shadow:0 18px 40px -24px rgba(14,58,92,.35);margin:2rem 0}
@@ -19,25 +20,35 @@
 @media(max-width:480px){.rgrid{grid-template-columns:1fr}}
 .sectkop{grid-column:1/-1;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--envelop);border-bottom:1px dashed var(--lijn);padding-bottom:.3rem;margin-top:.4rem}
 .uitslag{border-top:2px solid var(--inkt);padding:1.2rem 1.6rem;background:var(--papier-donker)}
-.uitslag table{width:100%;border-collapse:collapse;font-size:.92rem}
-.uitslag th{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.4rem .5rem;border-bottom:2px solid var(--inkt)}
-.uitslag td{padding:.45rem .5rem;border-bottom:1px solid var(--lijn)}
+.uitslag h3{font-family:'Besley',serif;font-weight:800;font-size:1.05rem;margin:.8rem 0 .4rem}
+.uitslag table{width:100%;border-collapse:collapse;font-size:.9rem;background:#fff}
+.uitslag th{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:.4rem .5rem;border-bottom:2px solid var(--inkt)}
+.uitslag td{padding:.42rem .5rem;border-bottom:1px solid var(--lijn)}
 .uitslag td.c{font-family:'IBM Plex Mono',monospace;text-align:right;white-space:nowrap}
 .totrij td{font-weight:700;border-top:2px solid var(--inkt)}
-.groot{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1rem}
-.groot .blok .lbl{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#5a6570}
-.groot .blok .cijfer{font-family:'IBM Plex Mono',monospace;font-size:1.9rem;font-weight:600}
+.groot{display:flex;gap:2rem;flex-wrap:wrap;margin:1.1rem 0 .4rem}
+.groot .blok .lbl{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#5a6570}
+.groot .blok .cijfer{font-family:'IBM Plex Mono',monospace;font-size:1.75rem;font-weight:600}
 .groot .fisc .cijfer{color:var(--envelop-diep)}.groot .bes .cijfer{color:var(--rood)}
+.marg{font-family:'IBM Plex Mono',monospace;font-size:.82rem;background:#fff;border:1px dashed var(--lijn);padding:.6rem .8rem;margin-top:.6rem;display:inline-block}
+.marg strong{color:var(--rood)}
+.scen{margin-top:1.2rem}
+.scen svg{width:100%;height:auto;background:#fff;border:1px solid var(--lijn)}
+.knoppen{display:flex;gap:.6rem;flex-wrap:wrap;padding:0 1.6rem 1.2rem}
+.knoppen button{padding:.6rem 1rem;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--inkt);background:#fff;color:var(--inkt);border-radius:4px;cursor:pointer}
+.knoppen button:hover{background:var(--inkt);color:#fff}
 .caveats{font-size:.8rem;color:#6a747d;padding:1rem 1.6rem;border-top:1px dashed var(--lijn)}
 .caveats li{margin-bottom:.35rem}
+#kopie-ok{color:var(--rood);font-family:'IBM Plex Mono',monospace;font-size:.75rem;align-self:center}
+@media print{.mast,.voet,.knoppen,.stuk>p:first-of-type,.terug,h2.faqkop,h3.faqv,p.faqa{display:none!important}body{background:#fff}.reken{box-shadow:none}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebApplication","name":"Erfbelasting Rekentool 2026 (Model DV-2026)","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},
+{"@type":"WebApplication","name":"Erfbelasting Rekentool 2026 (Model DV-2026)","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":"Beide overlijdens, wettelijke verdeling, renteclausule 0%/6%, WOZ-waardering, BOR, schenkplan, marginale druk, deelbare link"},
 {"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Hoe wordt erfbelasting berekend in 2026?","acceptedAnswer":{"@type":"Answer","text":"Per verkrijger: erfdeel minus vrijstelling (partner € 828.035; kind en kleinkind € 26.230; kind met beperking € 78.671; ouders € 62.110 samen; overig € 2.769), daarna 10%/20% voor partner en kind, 18%/36% voor kleinkind en 30%/40% voor overige verkrijgers, met de schijfgrens op € 158.669. De eigen woning telt voor de WOZ-waarde; ondernemingsvermogen kan onder de BOR grotendeels zijn vrijgesteld."}},
-{"@type":"Question","name":"Voor welke waarde telt de woning mee voor de erfbelasting?","acceptedAnswer":{"@type":"Answer","text":"De eigen woning wordt voor de erfbelasting gewaardeerd op de WOZ-waarde (van het jaar van overlijden of het jaar erna, de laagste mag worden gekozen), niet op de verwachte verkoopprijs. Andere onroerende zaken tellen voor de waarde in het economische verkeer; verhuurde woningen kunnen lager worden gewaardeerd via de leegwaarderatio."}},
-{"@type":"Question","name":"Hoeveel erfbelasting bespaar ik met jaarlijks schenken?","acceptedAnswer":{"@type":"Answer","text":"Elke geschonken euro binnen de jaarlijkse vrijstelling (€ 6.908 per kind in 2026) verlaat de toekomstige nalatenschap belastingvrij en bespaart daarmee 10% tot 20% erfbelasting. Twee kinderen en vijftien jaar schenken haalt ruim € 207.000 uit de grondslag — tegen het 20%-tarief ruim € 41.000 besparing."}}]}]}
+{"@type":"Question","name":"Hoe wordt erfbelasting berekend in 2026?","acceptedAnswer":{"@type":"Answer","text":"Per verkrijger: erfdeel minus vrijstelling (partner € 828.035; kind en kleinkind € 26.230; kind met beperking € 78.671; ouders € 62.110 samen; overig € 2.769), daarna 10%/20% voor partner en kind, 18%/36% voor kleinkind en 30%/40% voor overige verkrijgers, met de schijfgrens op € 158.669."}},
+{"@type":"Question","name":"Waarom erfbelasting over beide overlijdens berekenen?","acceptedAnswer":{"@type":"Answer","text":"Bij de wettelijke verdeling betalen kinderen al bij het eerste overlijden erfbelasting over hun vordering, en bij het tweede overlijden opnieuw over wat resteert. Een renteclausule van 6% samengesteld doet die vordering groeien en verkleint zo de tweede nalatenschap, maar bij 6% geldt ook geen gunstige waarderingskorting bij het eerste overlijden. Het saldo van beide effecten kan oplopen tot tienduizenden euro's en hangt af van het aantal jaren tussen beide overlijdens — precies wat gewone rekentools met één overlijden missen."}},
+{"@type":"Question","name":"Voor welke waarde telt de woning mee voor de erfbelasting?","acceptedAnswer":{"@type":"Answer","text":"De eigen woning telt voor de WOZ-waarde (jaar van overlijden of het jaar erna; de laagste mag worden gekozen), niet voor de verwachte verkoopprijs. Verhuurde woningen kunnen lager worden gewaardeerd via de leegwaarderatio."}}]}]}
 </script>
 </head>
 <body>
@@ -46,16 +57,16 @@
   <div class="mast-inner wrap"><p class="h1" style="font-family:'Besley',serif;font-weight:900;font-size:2rem"><a href="index.html" style="color:var(--inkt);text-decoration:none">DE VRIJSTELLING</a></p></div>
 </header>
 
-<article class="stuk" style="max-width:900px">
+<article class="stuk" style="max-width:960px">
   <span class="eyebrow">Rekentool</span>
-  <h1>Erfbelasting berekenen — 2026, tot op de euro</h1>
-  <p class="meta">Alle vrijstellingen en tarieven van belastingjaar 2026 · WOZ-waardering · BOR · schenkplan</p>
+  <h1>Erfbelasting berekenen — 2026, over beide overlijdens</h1>
+  <p class="meta">Wettelijke verdeling · renteclausule · WOZ · BOR · schenkplan · marginale druk · deelbare uitkomst</p>
 
-  <p>Vul de nalatenschap in zoals zij er werkelijk uitziet — woning tegen WOZ, spaargeld, beleggingen, eventueel ondernemingsvermogen en schulden — kies de erfgenamen, en zie per persoon de vrijstelling, de schijven en de aanslag. Zet daarna een schenkplan aan en zie wat níets doen kost.</p>
+  <p>Gewone rekentools rekenen één overlijden door. Maar bij gehuwde ouders heft de fiscus twéé keer — en de renteclausule op de kindsdeel-vordering bepaalt hoeveel er de tweede keer nog te halen valt. Deze tool rekent het hele traject door, met alle vrijstellingen, WOZ-waardering, de BOR en uw schenkplan.</p>
 
   <div class="reken">
     <h2>1 · De nalatenschap</h2>
-    <p class="sub2">Waarde op de overlijdensdatum. De eigen woning telt voor de <strong>WOZ-waarde</strong>, niet de verwachte verkoopprijs.</p>
+    <p class="sub2">Waarde nu. De eigen woning telt voor de <strong>WOZ-waarde</strong>, niet de verkoopprijs. Bij "beide overlijdens" vult u het gezamenlijke vermogen van beide partners in (gemeenschap van goederen).</p>
     <div class="rgrid">
       <div class="veld"><label for="woz">Eigen woning (WOZ, €)</label><input type="number" id="woz" value="480000" min="0" step="5000"></div>
       <div class="veld"><label for="vastgoed">Overig vastgoed (€)</label><input type="number" id="vastgoed" value="0" min="0" step="5000"></div>
@@ -63,41 +74,46 @@
       <div class="veld"><label for="beleg">Beleggingen (€)</label><input type="number" id="beleg" value="0" min="0" step="1000"></div>
       <div class="veld"><label for="bor">Ondernemingsvermogen (€)</label><input type="number" id="bor" value="0" min="0" step="10000"></div>
       <div class="veld"><label for="schuld">Hypotheek &amp; schulden (€)</label><input type="number" id="schuld" value="0" min="0" step="5000"></div>
-      <div class="sectkop">2 · De erfgenamen</div>
-      <div class="veld"><label for="partner">Partner erft mee?</label><select id="partner"><option value="0">Nee</option><option value="1">Ja</option></select></div>
-      <div class="veld"><label for="kids">Aantal kinderen</label><select id="kids"><option>0</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></div>
-      <div class="veld"><label for="anders">Overige verkrijgers</label><select id="anders"><option value="geen">Geen</option><option value="klein">1 kleinkind</option><option value="klein2">2 kleinkinderen</option><option value="overig">1 overige (broer/zus/vriend)</option></select></div>
+
+      <div class="sectkop">2 · De situatie</div>
+      <div class="veld"><label for="modus">Berekening</label><select id="modus"><option value="een">Eén overlijden</option><option value="twee" selected>Beide overlijdens (wettelijke verdeling)</option></select></div>
+      <div class="veld"><label for="kids">Aantal kinderen</label><select id="kids"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select></div>
+      <div class="veld" id="v-partner"><label for="partner">Partner erft mee?</label><select id="partner"><option value="1" selected>Ja</option><option value="0">Nee</option></select></div>
+      <div class="veld" id="v-rente"><label for="rente">Renteclausule kindsvordering</label><select id="rente"><option value="0">Geen rente (0%)</option><option value="6" selected>6% samengesteld</option></select></div>
+      <div class="veld" id="v-tussen"><label for="tussen">Jaren tussen beide overlijdens</label><select id="tussen"><option>5</option><option selected>10</option><option>15</option><option>20</option></select></div>
+      <div class="veld"><label for="anders">Extra verkrijger (2e overlijden)</label><select id="anders"><option value="geen" selected>Geen</option><option value="klein">1 kleinkind</option><option value="overig">1 overige</option></select></div>
+
       <div class="sectkop">3 · Het schenkplan (optioneel)</div>
-      <div class="veld"><label for="jaren">Jaren jaarlijks schenken</label><select id="jaren"><option>0</option><option>5</option><option selected>10</option><option>15</option><option>20</option><option>25</option></select></div>
-      <div class="veld"><label for="eenmalig">Eenmalig verhoogd (18–40 jr)</label><select id="eenmalig"><option value="0">Nee</option><option value="1">Ja, € 33.129 p/kind</option></select></div>
-      <div class="veld"><label for="verdeling">Verdeling</label><select id="verdeling"><option value="gelijk">Gelijke delen</option></select></div>
+      <div class="veld"><label for="jaren">Jaren jaarlijks schenken (€ 6.908 p/kind)</label><select id="jaren"><option selected>0</option><option>5</option><option>10</option><option>15</option><option>20</option><option>25</option></select></div>
+      <div class="veld"><label for="eenmalig">Eenmalig verhoogd (18–40 jr)</label><select id="eenmalig"><option value="0" selected>Nee</option><option value="1">Ja, € 33.129 p/kind</option></select></div>
+      <div class="veld"><label for="papier">Vermogen zit vast (papieren schenking)</label><select id="papier"><option value="0" selected>N.v.t.</option><option value="1">Ja — zelfde bedragen, op papier</option></select></div>
     </div>
 
-    <div class="uitslag">
-      <table id="tabel"></table>
-      <div class="groot">
-        <div class="blok fisc"><div class="lbl">Totale erfbelasting nu</div><div class="cijfer" id="totaal">€ —</div></div>
-        <div class="blok fisc"><div class="lbl">Effectieve druk</div><div class="cijfer" id="druk">— %</div></div>
-        <div class="blok bes"><div class="lbl">Besparing met schenkplan</div><div class="cijfer" id="besparing">€ —</div></div>
-      </div>
+    <div class="uitslag" id="uitslag"></div>
+
+    <div class="knoppen">
+      <button id="deel">Kopieer deelbare link</button>
+      <button onclick="window.print()">Print / bewaar als PDF</button>
+      <span id="kopie-ok"></span>
     </div>
 
     <ul class="caveats">
-      <li><strong>BOR:</strong> ondernemingsvermogen is tot € 1.543.500 volledig en daarboven voor 75% vrijgesteld, mits aan de bezits- en voortzettingseisen wordt voldaan; de tool past dit automatisch toe.</li>
-      <li><strong>Partner:</strong> de vrijstelling van € 828.035 kan lager uitvallen door pensioenimputatie (aftrek van de waarde van nabestaandenpensioen). Dat is hier niet meegenomen.</li>
-      <li><strong>Wettelijke verdeling of testament</strong> kan de werkelijke verkrijgingen en het heffingsmoment veranderen (onderbedelingsvorderingen, rente, tweetrapsmaking). Deze tool rekent met gelijke delen.</li>
+      <li><strong>Wettelijke verdeling:</strong> de partner verkrijgt alles; kinderen krijgen een niet-opeisbare vordering ter grootte van hun kindsdeel, waarover zij bij het eerste overlijden al erfbelasting verschuldigd zijn (de partner schiet die doorgaans voor). Zes procent samengesteld is het percentage waarbij de Belastingdienst de vordering nominaal waardeert, zonder correctie; bij een lagere rente (waaronder 0%) kan de vordering voor de erfbelasting juist lager gewaardeerd worden — met een navenant hogere waardering voor de partner, die zijn ruime vrijstelling meestal toch niet volmaakt. Deze tool past die correctie niet toe en rekent in alle scenario's met de nominale waarde; bij lage rente kan de werkelijke eerste aanslag daardoor iets lager uitvallen dan hier getoond. Of een hogere rente de <em>totale</em> heffing over beide overlijdens per saldo verlaagt, hangt af van de vrijstellingen en het aantal jaren tussen beide overlijdens — het is een echte afweging, geen automatische besparing.</li>
+      <li><strong>BOR:</strong> ondernemingsvermogen is tot € 1.543.500 volledig en daarboven voor 75% vrijgesteld, mits aan bezits- en voortzettingseisen is voldaan.</li>
+      <li><strong>Partner:</strong> de vrijstelling van € 828.035 kan lager uitvallen door pensioenimputatie; niet meegenomen.</li>
+      <li>Vermogensgroei tussen beide overlijdens is niet meegerekend; de erosie door de renteclausule is daardoor eerder onder- dan overschat.</li>
       <li>Aangiftetermijn: 20 maanden (overlijdens vanaf 1-1-2026). Schenkingen binnen 180 dagen vóór overlijden tellen nog altijd mee bij de nalatenschap (sinds 2026 uitsluitend via de erfbelasting) — dit schenkplan gaat uit van jaarlijks schenken tijdens gezonde jaren, ruim vóór die termijn.</li>
-      <li>Indicatieve berekening, belastingjaar 2026, bron Belastingdienst. Geen fiscaal of juridisch advies.</li>
+      <li>Indicatief, belastingjaar 2026, bron Belastingdienst. Geen fiscaal of juridisch advies; laat een concrete situatie door een notaris of adviseur doorrekenen.</li>
     </ul>
   </div>
 
-  <h2>Veelgestelde vragen</h2>
-  <h3>Hoe wordt erfbelasting berekend in 2026?</h3>
-  <p>Per verkrijger: erfdeel minus vrijstelling (partner € 828.035; kind en kleinkind € 26.230; kind met beperking € 78.671; ouders € 62.110 samen; overig € 2.769), daarna de tarieven — 10%/20% voor partner en kind, 18%/36% voor kleinkinderen, 30%/40% voor anderen — met de schijfgrens op € 158.669.</p>
-  <h3>Voor welke waarde telt de woning mee?</h3>
-  <p>De eigen woning telt voor de WOZ-waarde (jaar van overlijden of het jaar erna; de laagste mag). Overig vastgoed telt voor de waarde in het economische verkeer; verhuurde woningen kunnen lager via de leegwaarderatio.</p>
-  <h3>Wat levert jaarlijks schenken op?</h3>
-  <p>Elke euro binnen de jaarlijkse vrijstelling (€ 6.908 per kind) verlaat de latere nalatenschap belastingvrij en bespaart zo 10–20% erfbelasting. Hoe dat werkt: <a href="artikelen/dag-001-jaarlijkse-vrijstelling.html">dag 001</a> en <a href="artikelen/dag-002-papieren-schenking.html">dag 002</a>. Waarom wij vinden dat deze rekensom überhaupt niet zou moeten bestaan: <a href="artikelen/het-manifest.html">het manifest</a>.</p>
+  <h2 class="faqkop">Veelgestelde vragen</h2>
+  <h3 class="faqv">Waarom beide overlijdens doorrekenen?</h3>
+  <p class="faqa">Omdat de fiscus bij gehuwde ouders twee keer heft en de renteclausule op de kindsvordering bepaalt hoeveel er de tweede keer overblijft. Het verschil tussen 0% en 6% rente loopt bij een gemiddeld gezinsvermogen in de tienduizenden euro's — en geen enkele gewone rekentool laat het zien.</p>
+  <h3 class="faqv">Voor welke waarde telt de woning mee?</h3>
+  <p class="faqa">De eigen woning voor de WOZ-waarde (jaar van overlijden of het jaar erna, de laagste mag). Verhuurd vastgoed kan lager via de leegwaarderatio.</p>
+  <h3 class="faqv">Wat levert het schenkplan op?</h3>
+  <p class="faqa">Elke euro binnen de jaarlijkse vrijstelling verlaat de latere nalatenschap belastingvrij (10–20% besparing). Zit het vermogen in stenen, dan kan het op papier: zie <a href="artikelen/dag-002-papieren-schenking.html">dag 002</a>. Waarom deze rekensom niet zou moeten bestaan: <a href="artikelen/het-manifest.html">het manifest</a>.</p>
 
   <a class="terug" href="index.html">← naar de voorpagina</a>
 </article>
@@ -107,66 +123,124 @@
 <script>
 (function(){
 const f=n=>'€ '+Math.round(n).toLocaleString('nl-NL');
+const pct=n=>n.toFixed(1).replace('.',',')+' %';
 const GRENS=158669;
-const REL={
- partner:{vrij:828035,t1:.10,t2:.20,naam:'Partner'},
- kind:{vrij:26230,t1:.10,t2:.20,naam:'Kind'},
- klein:{vrij:26230,t1:.18,t2:.36,naam:'Kleinkind'},
- overig:{vrij:2769,t1:.30,t2:.40,naam:'Overige verkrijger'}
-};
-const BOR_100=1543500, BOR_REST=.75, JAAR_KIND=6908, EENMALIG=33129;
-function belast(deel,r){
- const b=Math.max(0,deel-r.vrij);
- return Math.min(b,GRENS)*r.t1+Math.max(0,b-GRENS)*r.t2;
+const REL={partner:{vrij:828035,t1:.10,t2:.20,naam:'Partner'},kind:{vrij:26230,t1:.10,t2:.20,naam:'Kind'},klein:{vrij:26230,t1:.18,t2:.36,naam:'Kleinkind'},overig:{vrij:2769,t1:.30,t2:.40,naam:'Overige'}};
+const BOR100=1543500,BORREST=.75,JK=6908,EEN=33129;
+const IDS=['woz','vastgoed','spaar','beleg','bor','schuld','modus','kids','partner','rente','tussen','anders','jaren','eenmalig','papier'];
+const el=id=>document.getElementById(id);
+const num=id=>Math.max(0,+el(id).value||0);
+function tax(deel,r){const b=Math.max(0,deel-r.vrij);return Math.min(b,GRENS)*r.t1+Math.max(0,b-GRENS)*r.t2;}
+function row(naam,deel,r){const b=Math.max(0,deel-r.vrij);const t=tax(deel,r);
+ return {html:`<tr><td>${naam}</td><td class="c">${f(deel)}</td><td class="c">${f(Math.min(deel,r.vrij))}</td><td class="c">${f(b)}</td><td class="c">${f(t)}</td></tr>`,t};}
+const KOP='<tr><th>Verkrijger</th><th style="text-align:right">Verkrijging</th><th style="text-align:right">Vrijstelling</th><th style="text-align:right">Belast</th><th style="text-align:right">Aanslag</th></tr>';
+
+function grondslag(schenkTot){
+ const ond=num('bor');
+ const borVrij=Math.min(ond,BOR100)+Math.max(0,ond-BOR100)*BORREST;
+ const netto=Math.max(0,num('woz')+num('vastgoed')+num('spaar')+num('beleg')+ond-num('schuld'));
+ return {netto,g:Math.max(0,Math.max(0,netto-borVrij)-schenkTot),borVrij};
 }
-function verdeel(netto,partner,kids,anders){
- const erv=[];
- if(partner)erv.push('partner');
- for(let i=0;i<kids;i++)erv.push('kind');
- if(anders==='klein')erv.push('klein');
- if(anders==='klein2'){erv.push('klein');erv.push('klein');}
- if(anders==='overig')erv.push('overig');
- if(!erv.length)return[];
- const deel=netto/erv.length;
- return erv.map(k=>({k,deel}));
+function schenkTotaal(){
+ const K=+el('kids').value;
+ return K*JK*(+el('jaren').value)+(+el('eenmalig').value? K*EEN:0);
+}
+function scenarioEen(schenk){
+ const {g}=grondslag(schenk);
+ const K=+el('kids').value, P=+el('partner').value===1, A=el('anders').value;
+ const erv=[];if(P)erv.push('partner');for(let i=0;i<K;i++)erv.push('kind');
+ if(A==='klein')erv.push('klein'); if(A==='overig')erv.push('overig');
+ const deel=erv.length?g/erv.length:0;
+ let tot=0,rows='';const tel={};
+ erv.forEach(k=>{tel[k]=(tel[k]||0)+1;
+  const r=row(REL[k].naam+((k==='kind')?' '+tel[k]:''),deel,REL[k]);rows+=r.html;tot+=r.t;});
+ return {tot,rows,g};
+}
+function scenarioTwee(schenk,rentePct){
+ const {g}=grondslag(schenk);
+ const K=Math.max(1,+el('kids').value), jr=+el('tussen').value, A=el('anders').value;
+ const N1=g/2, kindsdeel=N1/(K+1);
+ // Overlijden 1: kinderen belast over nominale vordering; partner over eigen erfdeel (kindsdeel)
+ let rows1='',t1=0;
+ for(let i=1;i<=K;i++){const r=row('Kind '+i+' (vordering)',kindsdeel,REL.kind);rows1+=r.html;t1+=r.t;}
+ const rp=row('Partner',kindsdeel,REL.partner);rows1+=rp.html;t1+=rp.t;
+ // Overlijden 2: vordering (evt. met rente) is aftrekbare schuld
+ const vordT=kindsdeel*Math.pow(1+rentePct/100,jr);
+ const N2v=Math.max(0,g - K*vordT);
+ const erv2=[];for(let i=0;i<K;i++)erv2.push('kind');
+ if(A==='klein')erv2.push('klein'); if(A==='overig')erv2.push('overig');
+ const deel2=erv2.length?N2v/erv2.length:0;
+ let rows2='',t2=0;const tel={};
+ erv2.forEach(k=>{tel[k]=(tel[k]||0)+1;
+  const r=row(REL[k].naam+((k==='kind')?' '+tel[k]:''),deel2,REL[k]);rows2+=r.html;t2+=r.t;});
+ return {t1,t2,rows1,rows2,g,N1,N2v,vordT,kindsdeel};
+}
+function balk(svgRows){
+ const max=Math.max(...svgRows.map(r=>r.v),1);
+ let y=18, s='';
+ svgRows.forEach(r=>{
+  const w=Math.max(4,540*r.v/max);
+  s+=`<text x="10" y="${y+15}" font-family="monospace" font-size="13" fill="#17222b">${r.l}</text>
+      <rect x="230" y="${y}" width="${w}" height="22" fill="${r.c}"/>
+      <text x="${236+w}" y="${y+16}" font-family="monospace" font-size="13" font-weight="bold" fill="#17222b">${f(r.v)}</text>`;
+  y+=36;});
+ return `<svg viewBox="0 0 860 ${y+6}" xmlns="http://www.w3.org/2000/svg">${s}</svg>`;
 }
 function reken(){
- const v=id=>Math.max(0,+document.getElementById(id).value||0);
- const woz=v('woz'),vg=v('vastgoed'),sp=v('spaar'),be=v('beleg'),ond=v('bor'),sch=v('schuld');
- const partner=+document.getElementById('partner').value===1;
- const kids=+document.getElementById('kids').value;
- const anders=document.getElementById('anders').value;
- const jaren=+document.getElementById('jaren').value;
- const eenm=+document.getElementById('eenmalig').value===1;
- // BOR-vrijstelling op ondernemingsvermogen
- const borVrij=Math.min(ond,BOR_100)+Math.max(0,ond-BOR_100)*BOR_REST;
- const bruto=woz+vg+sp+be+ond;
- const netto=Math.max(0,bruto-sch);
- const grondslag=Math.max(0,netto-borVrij);
- // Nu-scenario
- const delen=verdeel(grondslag,partner,kids,anders);
- let rows='<tr><th>Verkrijger</th><th style="text-align:right">Erfdeel*</th><th style="text-align:right">Vrijstelling</th><th style="text-align:right">Belast</th><th style="text-align:right">Aanslag</th></tr>';
- let tot=0;
- const telling={};
- delen.forEach(d=>{
-  const r=REL[d.k];
-  const b=Math.max(0,d.deel-r.vrij);
-  const t=belast(d.deel,r); tot+=t;
-  telling[d.k]=(telling[d.k]||0)+1;
-  const naam=r.naam+(['kind','klein'].includes(d.k)&&(telling[d.k])? ' '+telling[d.k]:'');
-  rows+=`<tr><td>${naam}</td><td class="c">${f(d.deel)}</td><td class="c">${f(Math.min(d.deel,r.vrij))}</td><td class="c">${f(b)}</td><td class="c">${f(t)}</td></tr>`;
- });
- rows+=`<tr class="totrij"><td>Totaal</td><td class="c">${f(grondslag)}</td><td></td><td></td><td class="c">${f(tot)}</td></tr>`;
- document.getElementById('tabel').innerHTML=rows;
- document.getElementById('totaal').textContent=f(tot);
- document.getElementById('druk').textContent=(netto>0?(100*tot/netto).toFixed(1):'0.0').replace('.',',')+' %';
- // Schenkplan: jaarlijkse vrijstelling + eenmalig, alleen richting kinderen
- let geschonken=Math.min(grondslag, kids*JAAR_KIND*jaren + (eenm?kids*EENMALIG:0));
- const delen2=verdeel(Math.max(0,grondslag-geschonken),partner,kids,anders);
- let tot2=0; delen2.forEach(d=>tot2+=belast(d.deel,REL[d.k]));
- document.getElementById('besparing').textContent=f(Math.max(0,tot-tot2));
+ const modus=el('modus').value;
+ el('v-partner').style.display=modus==='een'?'':'none';
+ el('v-rente').style.display=modus==='twee'?'':'none';
+ el('v-tussen').style.display=modus==='twee'?'':'none';
+ const S=schenkTotaal();
+ let html='';
+ if(modus==='een'){
+  const nu=scenarioEen(0), plan=scenarioEen(S);
+  const {netto}=grondslag(0);
+  html+=`<h3>Aanslag per verkrijger</h3><table>${KOP}${(S?plan:nu).rows}<tr class="totrij"><td>Totaal</td><td class="c">${f((S?plan:nu).g)}</td><td></td><td></td><td class="c">${f((S?plan:nu).tot)}</td></tr></table>`;
+   // marginale druk: extra 10.000 in de nalatenschap
+  const basis=scenarioEen(S).tot;
+  const gPlus=(function(){const sp=el('spaar');const oud=+sp.value;sp.value=oud+10000;const r=scenarioEen(S).tot;sp.value=oud;return r;})();
+  html+=`<div class="groot">
+   <div class="blok fisc"><div class="lbl">Totale erfbelasting</div><div class="cijfer">${f((S?plan:nu).tot)}</div></div>
+   <div class="blok fisc"><div class="lbl">Effectieve druk</div><div class="cijfer">${pct(netto>0?100*(S?plan:nu).tot/netto:0)}</div></div>
+   ${S?`<div class="blok bes"><div class="lbl">Besparing schenkplan</div><div class="cijfer">${f(Math.max(0,nu.tot-plan.tot))}</div></div>`:''}
+  </div>
+  <div class="marg">Marginale druk: van de volgende € 10.000 in deze nalatenschap gaat <strong>${f(Math.max(0,gPlus-basis))}</strong> naar de fiscus.</div>
+  <div class="scen"><h3>Scenario's vergeleken</h3>${balk([
+    {l:'Niets doen',v:nu.tot,c:'#0e3a5c'},
+    {l:'Met schenkplan',v:plan.tot,c:'#1d5d8f'},
+    {l:'Besparing',v:Math.max(0,nu.tot-plan.tot),c:'#c8352e'}])}</div>`;
+ } else {
+  const r6=scenarioTwee(S,+el('rente').value);
+  const r0=scenarioTwee(S,0), rZ=scenarioTwee(S,6);
+  const nu0=scenarioTwee(0,0), nu6=scenarioTwee(0,6);
+  html+=`<h3>Overlijden 1 — wettelijke verdeling (nalatenschap ${f(r6.N1)})</h3><table>${KOP}${r6.rows1}<tr class="totrij"><td>Totaal eerste overlijden</td><td></td><td></td><td></td><td class="c">${f(r6.t1)}</td></tr></table>
+  <h3>Overlijden 2 — na ${el('tussen').value} jaar (nalatenschap ${f(r6.N2v)}; kindsvorderingen ${+el('rente').value}%: ${f(r6.vordT)} p/kind, aftrekbaar)</h3>
+  <table>${KOP}${r6.rows2}<tr class="totrij"><td>Totaal tweede overlijden</td><td></td><td></td><td></td><td class="c">${f(r6.t2)}</td></tr></table>
+  <div class="groot">
+   <div class="blok fisc"><div class="lbl">Totaal beide overlijdens</div><div class="cijfer">${f(r6.t1+r6.t2)}</div></div>
+   <div class="blok fisc"><div class="lbl">Effectieve druk (op ${f(r6.g)})</div><div class="cijfer">${pct(r6.g>0?100*(r6.t1+r6.t2)/r6.g:0)}</div></div>
+   <div class="blok bes"><div class="lbl">Effect 6%-renteclausule</div><div class="cijfer">${((r0.t1+r0.t2)-(rZ.t1+rZ.t2))>=0?'− ':'+ '}${f(Math.abs((r0.t1+r0.t2)-(rZ.t1+rZ.t2)))}</div></div>
+  </div>
+  <div class="scen"><h3>Vier scenario's, totale heffing over beide overlijdens</h3>${balk([
+    {l:'Niets doen, 0% rente',v:nu0.t1+nu0.t2,c:'#0e3a5c'},
+    {l:'Niets doen, 6% rente',v:nu6.t1+nu6.t2,c:'#1d5d8f'},
+    {l:'Schenkplan, 0% rente',v:r0.t1+r0.t2,c:'#5a8ab0'},
+    {l:'Schenkplan, 6% rente',v:rZ.t1+rZ.t2,c:'#c8352e'}])}
+  <p style="font-size:.85rem;color:#5a6570;margin-top:.5rem">De vier balken combineren wel/geen schenkplan met 0%/6% rente op de kindsvordering. Welke combinatie voor uw gezin het gunstigst is, hangt af van het aantal jaren tussen beide overlijdens en de omvang van de nalatenschap — reken uw eigen situatie door in plaats van er één als vuistregel uit te lichten.</p></div>`;
+ }
+ el('uitslag').innerHTML=html;
 }
-document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',reken));
+IDS.forEach(id=>el(id).addEventListener('input',reken));
+// deelbare link
+el('deel').addEventListener('click',()=>{
+ const p=new URLSearchParams();IDS.forEach(id=>p.set(id,el(id).value));
+ const url=location.origin+location.pathname+'?'+p.toString();
+ (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(()=>{el('kopie-ok').textContent='Gekopieerd ✓';setTimeout(()=>el('kopie-ok').textContent='',2500);}).catch(()=>{prompt('Kopieer deze link:',url);});
+});
+// inlezen uit URL
+const q=new URLSearchParams(location.search);
+IDS.forEach(id=>{if(q.has(id))el(id).value=q.get(id);});
 reken();
 })();
 </script>
