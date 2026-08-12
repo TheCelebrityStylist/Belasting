@@ -5,7 +5,9 @@ Live via Vercel — elke push naar `main` deployt automatisch.
 
 ## Structuur
 
-- `index.html` — homepage: aanklacht-blok, rekenformulier (Model DV-2026), artikelarchief
+- `index.html` — homepage: aanklacht-blok, snel-rekenformulier (`#rekenformulier`), artikelarchief
+- `erfbelasting-berekenen.html` — de volledige rekentool (Model DV-2026): per erfgenaam, wettelijke verdeling met renteclausule over beide overlijdens, WOZ, BOR, schenkplan, marginale druk, deelbare link
+- `og/` — social-share-afbeeldingen (1200×630): `og-default.png`, `og-manifest.png`, `og-standaardwerk.png`, `og-rekentool.png`
 - `stijl.css` — gedeelde stylesheet (blauwe-envelop-design; niet wijzigen zonder expliciete opdracht)
 - `artikelen/het-manifest.html` — HET TOONANKER. Elk nieuw stuk moet familie zijn van dit manifest: zelfde temperatuur, zelfde precisie. Herlees het vóór elk artikel
 - `artikelen/dag-NNN-slug.html` — één bestand per artikel; `dag-004` en `dag-005` zijn de templates voor opiniestukken, `dag-001` t/m `003` voor instrumentele stukken
@@ -81,7 +83,7 @@ Het weekstuk wordt gevonden via twee kanalen: zoekmachines (SEO) en AI-antwoordm
 - Primair zoekwoord in: `<title>` (max. 60 tekens), `<h1>`, meta description (150–160 tekens, met zoekwoord én een klikreden), URL-slug, en de eerste alinea
 - H2-koppen dragen secundaire zoekwoorden waar dat natuurlijk kan — nooit geforceerd
 - Canonical tag en `og:title`/`og:description` in elke pagina
-- Interne links: elk artikel linkt naar het manifest, naar minstens één verwant artikel, en waar relevant naar het rekenformulier (`index.html#rekenformulier`). Ankerteksten beschrijvend, nooit "klik hier"
+- Interne links: elk artikel linkt naar het manifest, naar minstens één verwant artikel, en waar relevant naar de rekentool (`../erfbelasting-berekenen.html`). Ankerteksten beschrijvend, nooit "klik hier"
 - Slug kort en zoekwoord-dragend: `dag-006-viervoudige-heffing.html`, niet `dag-006-artikel.html`
 
 ### GEO-verpakking (voor AI-antwoordmachines)
@@ -94,10 +96,63 @@ Het weekstuk wordt gevonden via twee kanalen: zoekmachines (SEO) en AI-antwoordm
 ### Domein
 Productiedomein: `https://devrijstelling.nl` (Vercel-project "belasting", team Elke's projects; `www.devrijstelling.nl` staat er ook op maar de site canonicaliseert naar de kale apex). Gebruik dit voor canonical tags, `og:url` en `sitemap.xml` — niet het `*.vercel.app`-preview-domein.
 
+## Cijferbank 2026 (geverifieerd)
+
+Laatst geverifieerd: 11-08-2026, via web search tegen meerdere onafhankelijke bronnen. Gebruik déze cijfers in nieuwe stukken en rekentools. Bij twijfel, of wanneer een oudere upload afwijkt: eerst herverifiëren via web search, dan pas schrijven — nooit uit het geheugen of uit een eerdere upload overnemen, ook niet als die upload zelf een "correctieblad" claimt te zijn.
+
+**Vrijstellingen erfbelasting 2026**
+- Partner: € 828.035
+- Kind en kleinkind: € 26.230
+- Kind met beperking: € 78.671
+- Ouders (samen, niet per ouder): € 62.110
+- Overige verkrijgers: € 2.769
+
+**Tarieven erfbelasting 2026** (schijfgrens € 158.669)
+- Partner en kind: 10% tot de schijfgrens, 20% daarboven
+- Kleinkind: 18% / 36%
+- Overige verkrijgers: 30% / 40%
+
+**BOR (bedrijfsopvolgingsregeling) 2026**
+- 100% vrijgesteld tot € 1.543.500 ondernemingsvermogen per verkrijging; 75% vrijgesteld over het meerdere
+
+**Vrijstellingen schenkbelasting 2026**
+- Jaarlijks, kind: € 6.908 — jaarlijks, kleinkind/overig: € 2.769
+- Eenmalig verhoogd (kind 18–40 jaar, vrij besteedbaar): € 33.129
+- Eenmalig verhoogd (kind 18–40 jaar, aantoonbaar dure studie ≥ € 20.000/jaar): € 69.009 — vervangt de jaarlijkse vrijstelling, geen stapeling
+
+**Aangiftetermijn**
+- Overlijdens vanaf 1-1-2026: 20 maanden na overlijden (ook de belastingrente start pas dan)
+- Overlijdens vóór 1-1-2026: 8 maanden (oud regime — alléén gebruiken bij expliciet historische of vergelijkende verwijzingen, nooit als geldend recht voor een huidig geval)
+
+**180-dagenregel (art. 12 SW)** — **let op, dit is de meest hardnekkige terugkerende fout in deze repo:**
+- De regel zélf blijft bestaan: schenkingen binnen 180 dagen vóór overlijden tellen nog altijd mee bij de nalatenschap
+- Wat wijzigde per 1-1-2026: zulke schenkingen vallen voortaan uitsluitend onder de erfbelasting (met haar eigen, doorgaans ruimere vrijstellingen) in plaats van eerst schenkbelasting plus een verrekening met erfbelasting bij overlijden. Er is geen aparte schenkbelastingaangifte meer nodig
+- **Schrijf nooit** "de 180-dagenregel is afgeschaft" of "schenkingen vallen voortaan uitsluitend onder de schenkbelasting" — beide zijn feitelijk onjuist (het is precies andersom: uitsluitend onder de erfbelasting) en zijn al twee keer per abuis aangeleverd en gecorrigeerd. Zie Terugkerende-fouten-lijst
+
+**Waardering eigen woning**
+- WOZ-waarde (jaar van overlijden of het jaar erna, laagste mag worden gekozen) — niet de verwachte verkoopprijs; verhuurd vastgoed kan lager via de leegwaarderatio
+
+**Biologische kinderen zonder juridische familieband**
+- Sinds 1-1-2026 gelijkgesteld met erkende kinderen (kindvrijstelling, kindtarief) op grond van HR 6-9-2024 (art. 8 en 14 EVRM); ouderschap moet worden aangetoond, bijvoorbeeld via DNA-onderzoek
+
+## Terugkerende-fouten-lijst
+
+1. **De 8-maanden/180-dagen-fout** (al minstens tweemaal gemaakt, in Het Standaardwerk-uploads én in rekentool-caveats): "acht maanden" als aangiftetermijn en/of "de 180-dagenregel is afgeschaft" gepubliceerd als geldend recht. De juiste stand staat in de Cijferbank hierboven. Controleer dit bij élke upload opnieuw — ook wanneer een eerdere sessie het al correct had, want geregenereerde uploads draaien de correctie stelselmatig terug
+2. **Meta descriptions**: 150–160 tekens, niet meer en niet minder; geen onverifieerbare superlatieven ("de meest complete...", "de beste... van Nederland") zonder bron — precisie, geen marketingtaal
+
 ## Kwaliteitspoort (verplicht vóór elke commit)
 
 1. **De tegenstander-pass**: herlees het hele stuk als de scherpste fiscalist die vóór erfbelasting is. Elke zin die hij kan afbranden met "feitelijk onjuist" of "stroman" wordt herschreven
 2. **De twijfelaar-test**: wijs de drie alinea's aan waarmee de twijfelende PvdA-stemmer het nog eens is. Zijn die er niet: herschrijven
 3. **De voorlees-test**: elke zin die je niet in één adem hardop kunt zeggen, wordt gesplitst
 4. **De schrap-pass**: laatste versie is 15–20% korter dan de eerste
-5. **Cijfercheck**: elk bedrag, jaartal en arrest is déze sessie via web search geverifieerd
+5. **Cijfercheck**: elk bedrag, jaartal en arrest is déze sessie via web search geverifieerd — of, voor de constanten in de Cijferbank hierboven, tegen die bank gecontroleerd
+
+### Adviseur-pass (verplicht bij rekentools en instrumentele stukken)
+
+Van toepassing op elk stuk met planningsimplicaties: rekentools, en instrumentele artikelen over renteclausules, BOR, schenkingsroutes of vergelijkbare constructies.
+
+- Elke bewering met planningsimplicaties wordt geformuleerd als afweging, met de bepalende variabelen expliciet benoemd (aantal jaren tot een volgend overlijden, omvang van de nalatenschap, welke vrijstelling van toepassing is) — nooit als vuistregel en nooit als "gratis winst"
+- Indicatoren en samenvattende cijfers tonen het werkelijke verschil, inclusief een mogelijk negatief teken — nooit geklemd op nul om een ongunstige uitkomst te verbergen
+- Voorbeeld uit de praktijk: de 6%-renteclausule bij de wettelijke verdeling verkleint de tweede nalatenschap, maar mist bij 6% ook de gunstige waarderingskorting bij het eerste overlijden — het saldo is een afweging die van de omstandigheden afhangt, geen automatische besparing (zie `erfbelasting-berekenen.html`)
+- Sluit met een concrete verwijzing naar professioneel advies wanneer de uitkomst een individuele beslissing raakt (testament, renteclausule, BOR-structurering)
