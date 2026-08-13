@@ -2,6 +2,9 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Besley:wght@400;700;800;900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" as="style">
@@ -16,15 +19,33 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://devrijstelling.nl/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="De Vrijstelling — tegen de erfbelasting, elke week één stuk">
+<meta name="twitter:description" content="Gecondoleerd. Dat is dan tien tot twintig procent. De Vrijstelling schrijft wekelijks tegen de Nederlandse erf- en schenkbelasting — met cijfers die kloppen en wetten die je kunt nalezen.">
+<meta name="twitter:image" content="https://devrijstelling.nl/og/og-default.png">
 <link rel="stylesheet" href="stijl.css">
 <link rel="alternate" type="application/rss+xml" title="De Vrijstelling" href="feed.xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "De Vrijstelling",
-  "url": "https://devrijstelling.nl/",
-  "description": "Wekelijkse tegenlezing van de Successiewet 1956, tegen de Nederlandse erf- en schenkbelasting."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://devrijstelling.nl/#organization",
+      "name": "De Vrijstelling",
+      "url": "https://devrijstelling.nl/",
+      "logo": "https://devrijstelling.nl/apple-touch-icon.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://devrijstelling.nl/#website",
+      "name": "De Vrijstelling",
+      "url": "https://devrijstelling.nl/",
+      "description": "Wekelijkse tegenlezing van de Successiewet 1956, tegen de Nederlandse erf- en schenkbelasting.",
+      "publisher": { "@id": "https://devrijstelling.nl/#organization" },
+      "inLanguage": "nl"
+    }
+  ]
 }
 </script>
 </head>
