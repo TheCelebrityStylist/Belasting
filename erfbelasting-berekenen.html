@@ -52,6 +52,8 @@
 .knoppen button:hover{background:var(--inkt);color:#fff}
 .caveats{font-size:.8rem;color:#6a747d;padding:1rem 1.6rem;border-top:1px dashed var(--lijn)}
 .caveats li{margin-bottom:.35rem}
+.foutmelding{margin:0 1.6rem 1rem;padding:.7rem 1rem;background:#fbeceb;border:1px solid var(--rood);border-left:5px solid var(--rood);border-radius:0 4px 4px 0;color:#7a231e;font-size:.88rem}
+.veld input[aria-invalid="true"]{border-color:var(--rood);outline:2px solid var(--rood)}
 #kopie-ok{color:var(--rood);font-family:'IBM Plex Mono',monospace;font-size:.75rem;align-self:center}
 @media print{.mast,.voet,.knoppen,.stuk>p:first-of-type,.terug,h2.faqkop,h3.faqv,p.faqa{display:none!important}body{background:#fff}.reken{box-shadow:none}}
 </style>
@@ -126,7 +128,8 @@
       <div class="veld"><label for="papier">Vermogen zit vast (papieren schenking)</label><select id="papier"><option value="0" selected>N.v.t.</option><option value="1">Ja — zelfde bedragen, op papier</option></select></div>
     </div>
 
-    <div class="uitslag" id="uitslag"></div>
+    <div id="foutmelding" class="foutmelding" role="alert" aria-live="polite" hidden></div>
+    <div class="uitslag" id="uitslag" aria-live="polite" aria-atomic="true"></div>
 
     <div class="knoppen">
       <button id="deel">Kopieer deelbare link</button>
@@ -166,8 +169,31 @@ const GRENS=158669;
 const REL={partner:{vrij:828035,t1:.10,t2:.20,naam:'Partner'},kind:{vrij:26230,t1:.10,t2:.20,naam:'Kind'},klein:{vrij:26230,t1:.18,t2:.36,naam:'Kleinkind'},overig:{vrij:2769,t1:.30,t2:.40,naam:'Overige'}};
 const BOR100=1543500,BORREST=.75,JK=6908,EEN=33129;
 const IDS=['woz','vastgoed','spaar','beleg','bor','schuld','modus','kids','partner','rente','tussen','anders','jaren','eenmalig','papier'];
+const NUMERIC_IDS=['woz','vastgoed','spaar','beleg','bor','schuld'];
+const VELD_NAAM={woz:'Eigen woning (WOZ)',vastgoed:'Overig vastgoed',spaar:'Spaargeld',beleg:'Beleggingen',bor:'Ondernemingsvermogen',schuld:'Hypotheek & schulden'};
 const el=id=>document.getElementById(id);
 const num=id=>Math.max(0,+el(id).value||0);
+function valideer(){
+ const fouten=[];
+ NUMERIC_IDS.forEach(id=>{
+  const veld=el(id), raw=veld.value.trim();
+  veld.removeAttribute('aria-invalid');
+  if(raw===''){return;} // leeg veld = € 0, geen fout
+  const n=Number(raw);
+  if(!Number.isFinite(n)){
+   fouten.push(`${VELD_NAAM[id]}: voer een geldig bedrag in.`);
+   veld.setAttribute('aria-invalid','true');
+  } else if(n<0){
+   fouten.push(`${VELD_NAAM[id]}: een negatief bedrag is niet mogelijk.`);
+   veld.setAttribute('aria-invalid','true');
+  }
+ });
+ return fouten;
+}
+function syncURL(){
+ const p=new URLSearchParams();IDS.forEach(id=>p.set(id,el(id).value));
+ history.replaceState(null,'',location.pathname+'?'+p.toString());
+}
 function tax(deel,r){const b=Math.max(0,deel-r.vrij);return Math.min(b,GRENS)*r.t1+Math.max(0,b-GRENS)*r.t2;}
 function row(naam,deel,r){const b=Math.max(0,deel-r.vrij);const t=tax(deel,r);
  return {html:`<tr><td>${naam}</td><td class="c">${f(deel)}</td><td class="c">${f(Math.min(deel,r.vrij))}</td><td class="c">${f(b)}</td><td class="c">${f(t)}</td></tr>`,t};}
@@ -225,6 +251,17 @@ function balk(svgRows){
  return `<svg viewBox="0 0 860 ${y+6}" xmlns="http://www.w3.org/2000/svg">${s}</svg>`;
 }
 function reken(){
+ const fouten=valideer();
+ const foutbox=el('foutmelding');
+ if(fouten.length){
+  foutbox.innerHTML=fouten.map(f=>`<div>${f}</div>`).join('');
+  foutbox.hidden=false;
+  el('uitslag').innerHTML='';
+  syncURL();
+  return;
+ }
+ foutbox.hidden=true;
+ foutbox.innerHTML='';
  const modus=el('modus').value;
  el('v-partner').style.display=modus==='een'?'':'none';
  el('v-rente').style.display=modus==='twee'?'':'none';
@@ -268,12 +305,13 @@ function reken(){
   <p style="font-size:.85rem;color:#5a6570;margin-top:.5rem">De vier balken combineren wel/geen schenkplan met 0%/6% rente op de kindsvordering. Welke combinatie voor uw gezin het gunstigst is, hangt af van het aantal jaren tussen beide overlijdens en de omvang van de nalatenschap — reken uw eigen situatie door in plaats van er één als vuistregel uit te lichten.</p></div>`;
  }
  el('uitslag').innerHTML=html;
+ syncURL();
 }
 IDS.forEach(id=>el(id).addEventListener('input',reken));
-// deelbare link
+// live URL-sync (history.replaceState, zie syncURL) houdt de adresbalk al bij elke
+// wijziging deelbaar; deze knop kopieert die actuele URL naar het klembord
 el('deel').addEventListener('click',()=>{
- const p=new URLSearchParams();IDS.forEach(id=>p.set(id,el(id).value));
- const url=location.origin+location.pathname+'?'+p.toString();
+ const url=location.href;
  (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(()=>{el('kopie-ok').textContent='Gekopieerd ✓';setTimeout(()=>el('kopie-ok').textContent='',2500);}).catch(()=>{prompt('Kopieer deze link:',url);});
 });
 // inlezen uit URL
