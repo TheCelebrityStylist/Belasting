@@ -24,11 +24,49 @@
 <link rel="stylesheet" href="../stijl.css">
 <link rel="alternate" type="application/rss+xml" title="De Vrijstelling" href="../feed.xml">
 <style>
-.hfd{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rood);font-weight:600;margin:3.4rem 0 .2rem}
+.hfd{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rood);font-weight:600;margin:3.4rem 0 .2rem;display:flex;align-items:baseline;gap:.6rem}
 .inhoud{background:#fff;border:1px solid var(--lijn);border-left:5px solid var(--envelop);padding:1.4rem 1.6rem;margin:2rem 0;border-radius:0 6px 6px 0}
 .inhoud ol{margin:.6rem 0 0 1.2rem;line-height:2}
 .inhoud a{text-decoration:none}
 .inhoud .nog{color:#8a949d}
+.pdf-knop{margin-top:.9rem;padding:.5rem .9rem;font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--inkt);background:#fff;color:var(--inkt);border-radius:4px;cursor:pointer}
+.pdf-knop:hover{background:var(--inkt);color:#fff}
+
+/* leesvoortgangsbalk */
+#voortgang{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--rood);z-index:200;transition:width .08s linear}
+@media(prefers-reduced-motion:reduce){#voortgang{transition:none}}
+
+/* ankerknopje per hoofdstuk */
+.anker{font-family:'IBM Plex Mono',monospace;font-size:.9rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--envelop);background:none;border:none;cursor:pointer;padding:0 .2rem;line-height:1;opacity:.55}
+.anker:hover,.anker:focus-visible{opacity:1}
+#anker-ok{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--rood);text-transform:none;letter-spacing:0;font-weight:600}
+
+/* sticky hoofdstuknavigatie — brede schermen */
+.boeknav{display:none}
+@media(min-width:1100px){
+  .boekwrap{display:flex;gap:2.6rem;max-width:1180px;margin:0 auto;width:94vw}
+  .boekwrap article.stuk{width:auto;margin:0;flex:1 1 auto;min-width:0}
+  .boeknav{display:block;flex:0 0 232px}
+  .boeknav-inner{position:sticky;top:1.4rem;background:#fff;border:1px solid var(--lijn);border-left:5px solid var(--envelop);border-radius:0 6px 6px 0;padding:1.1rem 1.2rem;max-height:calc(100vh - 2.8rem);overflow-y:auto}
+  .boeknav-inner strong{display:block;font-family:'Besley',serif;font-weight:800;font-size:.95rem;margin-bottom:.6rem}
+  .boeknav-inner ol{list-style:none;margin:0;padding:0}
+  .boeknav-inner li{margin-bottom:.5rem}
+  .boeknav-inner a{display:block;font-size:.8rem;line-height:1.35;color:#3d4a54;text-decoration:none;border-left:3px solid transparent;padding-left:.6rem;transition:color .1s,border-color .1s}
+  .boeknav-inner a:hover{color:var(--envelop)}
+  .boeknav-inner a.actief{color:var(--rood);border-left-color:var(--rood);font-weight:600}
+  .boekwrap .inhoud{display:none}
+}
+
+@media print{
+  .mast,.voet,.boeknav,.inhoud,.knoppen,.pdf-knop,.terug,.anker,#anker-ok,#voortgang{display:none!important}
+  .boekwrap{display:block!important}
+  .boekwrap article.stuk{width:auto!important;max-width:none!important}
+  body{background:#fff}
+  .hfd:not(.eerste){break-before:page}
+  h2,h3{break-after:avoid}
+  p{orphans:3;widows:3}
+  @page{margin:2cm 1.6cm;@bottom-center{content:counter(page) " / " counter(pages);font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:#555}}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"Het Standaardwerk tegen de erfbelasting","datePublished":"2026-08-07","dateModified":"2026-08-11","author":{"@type":"Organization","name":"De Vrijstelling"},"inLanguage":"nl"}
@@ -61,12 +99,20 @@
 </script>
 </head>
 <body>
+<div id="voortgang" aria-hidden="true"></div>
 <header class="mast">
   <div class="mast-strip"><div class="wrap"><span>Successiewet 1956 — tegenlezing</span><span>Het standaardwerk</span></div></div>
   <div class="mast-inner wrap"><p class="h1" style="font-family:'Besley',serif;font-weight:900;font-size:2rem"><a href="../index.html" style="color:var(--inkt);text-decoration:none">DE VRIJSTELLING</a></p></div>
 </header>
 <main>
 
+<div class="boekwrap">
+<nav class="boeknav" aria-label="Hoofdstukken">
+  <div class="boeknav-inner">
+    <strong>Hoofdstukken</strong>
+    <ol id="boeknav-lijst"></ol>
+  </div>
+</nav>
 <article class="stuk">
   <span class="eyebrow">Het standaardwerk · voltooid boekessay</span>
   <h1>Rouw is geen belastbaar feit — het volledige pleidooi</h1>
@@ -86,9 +132,10 @@
       <li><a href="#h8">Het alternatief: heffen bij de levenden</a></li>
       <li><a href="#epiloog-slot">Epiloog — Wat wij vragen</a></li>
     </ol>
+    <button class="pdf-knop" onclick="window.print()">Bewaar als PDF</button>
   </div>
 
-  <p class="hfd" id="proloog">Proloog</p>
+  <p class="hfd eerste" id="proloog">Proloog</p>
   <h2>De envelop</h2>
 
   <p>Elk pleidooi behoort te beginnen bij de werkelijkheid die het wil veranderen, dus beginnen wij in een rijtjeshuis, op een dinsdag, zes weken na een uitvaart. Een vrouw van drieënvijftig ruimt het huis leeg waarin ze is opgegroeid. Ze doet wat iedereen in die weken doet: ze vindt de foto's die niemand meer kan duiden, de la met opladers van apparaten die niet meer bestaan, het handschrift van haar moeder achterop een recept voor een taart die nooit meer gebakken zal worden. De post is doorgestuurd naar haar eigen adres. Tussen de laatste condoleancekaarten — de nakomers, van mensen die het pas laat hoorden — ligt een envelop die niet condoleert. Hij is blauw. Hij bevat geen medeleven maar een mededeling: dat zij, sinds de verruiming van 2026, twintig maanden heeft om aangifte te doen van alles wat haar moeder naliet — de Belastingdienst noemt dat coulance — en dat over de waarde daarvan, het huis waar zij nu doorheen loopt, de spaarrekening waarvan haar moeder nooit iets voor zichzelf kocht, belasting verschuldigd is. Tien procent over de eerste anderhalve ton, twintig procent daarboven. Er staat ook in wat er gebeurt als ze te laat is: dan komt er rente bij.</p>
@@ -234,8 +281,65 @@
 
   <a class="terug" href="../index.html">← naar de voorpagina</a>
 </article>
+</div>
 
 </main>
 <footer class="voet"><div class="wrap"><div><strong>De Vrijstelling</strong>Opinie. Geen fiscaal of juridisch advies. Literatuur bij hoofdstuk 1: Cassius Dio LV; Plinius, Panegyricus; OECD, Inheritance Taxation in OECD Countries (2021); J.S. Mill, Principles of Political Economy; A. Carnegie, The Gospel of Wealth (1889); H. Ohlsson (2009); Successiewetten 1817/1859/1956; Wet van 17 december 2009 (modernisering schenk- en erfbelasting). Bij hoofdstuk 3: E. McCaffery, The Uneasy Case for Wealth Transfer Taxation (Yale LJ, 1994); T. Piketty &amp; E. Saez, A Theory of Optimal Inheritance Taxation (Econometrica, 2013); D. Holtz-Eakin, D. Joulfaian &amp; H. Rosen, The Carnegie Conjecture (QJE, 1993); T. Piketty, Le Capital au XXIe siècle (2013); OECD (2021). Bij hoofdstuk 4: Successiewet 1956, tarieven en vrijstellingen 2026 (Belastingdienst); BOR 2026 (100% tot € 1.543.500, 75% daarboven); CBS/Kadaster (woningprijzen); ambtelijke evaluaties bedrijfsopvolgingsregeling. Bij hoofdstuk 5: VfGH 7-3-2007, G 54/06; Riksdagen prop. 2004/05:25 en 2004/05:97; SOU 2004:66; uitslagen Zwitserse volksstemmingen 14-6-2015 en 30-11-2025 (Bundeskanzlei/EFD); Noorse afschaffing arveavgift per 1-1-2014 met continuïteitsbeginsel; Canadese overgang naar deemed disposition (1972); R. Bénabou &amp; E.A. Ok (QJE, 2001). Bij hoofdstuk 6: art. 94, 104 en 120 Grondwet; art. 1 Eerste Protocol en art. 14 EVRM; HR 24-12-2021 (Kerstarrest); HR 22-11-2013 (BOR-arresten); EHRM 14-5-2013, N.K.M. t. Hongarije; HvJ EU 11-12-2003, C-364/01 (Barbier). Bij hoofdstuk 7: CPB, Erfbelasting in beeld: feiten, percepties en voorkeuren van Nederlanders (2026); I&amp;O Research (2021); CBS, (Gezonde) levensverwachting naar opleidingsniveau (2024). Bij hoofdstuk 8: Oostenrijkse Schenkungsmeldegesetz 2008; Noors continuïteitsbeginsel bij afschaffing arveavgift (1-1-2014); Canadese deemed disposition (1972); wetstraject box 3 op werkelijk rendement; CBS, belastingontvangsten erf- en schenkbelasting 2024 (€ 3,4 miljard, circa 0,8% van de totale belastingontvangsten).</div></div></footer>
+<script>
+(function(){
+// sticky hoofdstuknavigatie: kopieer de bestaande inhoudsopgave naar de zijbalk
+var lijst=document.getElementById('boeknav-lijst');
+var bronLinks=document.querySelectorAll('.inhoud ol a');
+bronLinks.forEach(function(a){
+ var li=document.createElement('li');
+ var clone=a.cloneNode(true);
+ li.appendChild(clone);
+ lijst.appendChild(li);
+});
+var navLinks=lijst.querySelectorAll('a');
+var hoofdstukken=document.querySelectorAll('.hfd[id]');
+
+// leesvoortgangsbalk + scroll-spy (samen in één rAF-throttled handler)
+var balk=document.getElementById('voortgang');
+var artikel=document.querySelector('article.stuk');
+var raf=null;
+function updateActief(){
+ var drempel=window.scrollY+90;
+ var huidig=null;
+ hoofdstukken.forEach(function(h){
+  if(h.offsetTop<=drempel)huidig=h;
+ });
+ navLinks.forEach(function(a){
+  a.classList.toggle('actief', !!huidig && a.getAttribute('href')==='#'+huidig.id);
+ });
+}
+function updateVoortgang(){
+ raf=null;
+ var totaal=artikel.scrollHeight-window.innerHeight;
+ var gelezen=Math.min(1,Math.max(0,(window.scrollY-artikel.offsetTop+200)/Math.max(1,totaal)));
+ balk.style.width=(gelezen*100)+'%';
+ updateActief();
+}
+window.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(updateVoortgang);},{passive:true});
+window.addEventListener('resize',function(){if(!raf)raf=requestAnimationFrame(updateVoortgang);});
+updateVoortgang();
+
+// ankerknopje per hoofdstuk: kopieert een directe link naar dat hoofdstuk
+hoofdstukken.forEach(function(h){
+ var btn=document.createElement('button');
+ btn.className='anker';
+ btn.type='button';
+ btn.textContent='¶';
+ btn.setAttribute('aria-label','Kopieer link naar dit hoofdstuk');
+ btn.addEventListener('click',function(){
+  var url=location.origin+location.pathname+'#'+h.id;
+  var orig='¶';
+  function toon(tekst){btn.textContent=tekst;setTimeout(function(){btn.textContent=orig;},1500);}
+  (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){toon('✓');}).catch(function(){prompt('Kopieer deze link:',url);});
+ });
+ h.appendChild(btn);
+});
+})();
+</script>
 </body>
 </html>
