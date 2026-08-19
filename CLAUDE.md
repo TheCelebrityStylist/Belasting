@@ -56,6 +56,8 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 011 — Wie betaalt er werkelijk (gepubliceerd: dag-011-erfbelasting-ontwijken-rijken.html)
 - [x] Dag 012 — Erfbelasting 2026: drie wijzigingen, drie bekentenissen (actualiteit, gepubliceerd: dag-012-erfbelasting-2026-bekentenis.html)
 - [x] Dag 013 — De tweetrapsmaking (gepubliceerd: dag-013-tweetrapsmaking.html)
+- [ ] Dag 014 — Het afvullegaat (GSC 20-8: 7 vertoningen, positie 71, nog geen pagina; instrumenteel stuk, aansluitend op dag 013)
+- [ ] Naslag — de dubbele vrijstelling uitdiepen tot een eigen sectie of pagina, als de sectie op vrijstelling-erfbelasting-2026.html vertoningen trekt (GSC 20-8: "dubbele vrijstelling erfbelasting" 22 vertoningen, landde toen nog op de homepage positie ~76)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
 
@@ -137,8 +139,9 @@ Laatst geverifieerd: 11-08-2026, via web search tegen meerdere onafhankelijke br
 
 ## Terugkerende-fouten-lijst
 
-1. **De 8-maanden/180-dagen-fout** (al minstens tweemaal gemaakt, in Het Standaardwerk-uploads én in rekentool-caveats): "acht maanden" als aangiftetermijn en/of "de 180-dagenregel is afgeschaft" gepubliceerd als geldend recht. De juiste stand staat in de Cijferbank hierboven. Controleer dit bij élke upload opnieuw — ook wanneer een eerdere sessie het al correct had, want geregenereerde uploads draaien de correctie stelselmatig terug
+1. **De 8-maanden/180-dagen-fout** (al minstens driemaal gemaakt: in Het Standaardwerk-uploads, in rekentool-caveats, en op 19-08-2026 zelfs in de instructietekst van een SEO-sprintopdracht — "nu de 180-dagenregel is afgeschaft"): "acht maanden" als aangiftetermijn en/of "de 180-dagenregel is afgeschaft" gepubliceerd als geldend recht. De juiste stand staat in de Cijferbank hierboven. Controleer dit bij élke upload én elke opdrachttekst opnieuw — ook wanneer een eerdere sessie het al correct had, want geregenereerde uploads en herhaalde instructies draaien de correctie stelselmatig terug
 2. **Meta descriptions**: 150–160 tekens, niet meer en niet minder; geen onverifieerbare superlatieven ("de meest complete...", "de beste... van Nederland") zonder bron — precisie, geen marketingtaal
+3. **Host-canonicalisatie**: op 19-08-2026 uitgevoerd (zie § Domein) — een 308-redirect in vercel.json stuurt www.devrijstelling.nl door naar de kale apex. Vóór die datum kon dit niet live geverifieerd worden vanuit de sandbox (egress-policy blokkeert het domein); controleer bij twijfel het Vercel-dashboard, niet alleen deze repo
 
 ## Kwaliteitspoort (verplicht vóór elke commit)
 
