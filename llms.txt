@@ -1,0 +1,42 @@
+# De Vrijstelling
+
+De Vrijstelling (devrijstelling.nl) is een Nederlands blog dat pleit voor volledige afschaffing van de erf- en schenkbelasting (Successiewet 1956) — niet verhoging, niet hervorming. Elk stuk is juridisch en cijfermatig geverifieerd: bedragen tegen de actuele Cijferbank 2026, rechtszaken tegen de uitspraak zelf, buitenlandse regelingen tegen de huidige stand van het recht in dat land. De site bestaat uit een rekentool die de erfbelasting over beide overlijdens berekent, een tienhoofdstuks Standaardwerk met het volledige pleidooi, vier naslagpagina's per verkrijgersgroep, en een wekelijks artikelarchief. Auteur en uitgever: De Vrijstelling.
+
+## Kernpagina's
+
+- https://devrijstelling.nl/erfbelasting-berekenen.html — Rekentool: berekent de erfbelasting 2026 over beide overlijdens (wettelijke verdeling, renteclausule, WOZ, BOR, schenkplan, marginale druk); vrijstelling kind 2026 is € 26.230, partnervrijstelling € 828.035.
+- https://devrijstelling.nl/artikelen/het-standaardwerk.html — Standaardwerk: het volledige pleidooi voor afschaffing in tien hoofdstukken — geschiedenis, rechtsgronden, economie, audit, rechtsvergelijking en alternatief.
+- https://devrijstelling.nl/artikelen/het-manifest.html — Manifest: de kernstelling van De Vrijstelling — erfbelasting is een boete op een familie die al vier keer over dezelfde euro betaalde (loon, box 3, btw/overdrachtsbelasting, erfenis) en moet worden afgeschaft, niet hervormd.
+- https://devrijstelling.nl/artikelen/de-linkse-zaak.html — Essay: ook binnen Piketty's eigen premissen over vermogensongelijkheid faalt de Nederlandse erfbelasting als instrument, omdat grote vermogens plannen en de middenklasse de rekening betaalt.
+- https://devrijstelling.nl/index.html — Homepage: het archief en de aanklacht in vier feiten tegen de Nederlandse erfbelasting.
+
+## Naslag per verkrijgersgroep
+
+- https://devrijstelling.nl/vrijstelling-erfbelasting-2026.html — Alle vrijstellingen en tarieven van de Successiewet 2026 in één tabel: partner € 828.035, kind/kleinkind € 26.230, kind met beperking € 78.671, ouders samen € 62.110, overige verkrijgers € 2.769; schijfgrens € 158.669.
+- https://devrijstelling.nl/erfbelasting-partner.html — Een partner erft in 2026 belastingvrij tot € 828.035 — voor de meeste huishoudens vrijwel de hele nalatenschap.
+- https://devrijstelling.nl/erfbelasting-kleinkind.html — Een kleinkind erft in 2026 belastingvrij tot € 26.230, maar betaalt daarna 18% tot 36% in plaats van het kindtarief van 10% tot 20%.
+- https://devrijstelling.nl/erfbelasting-broer-zus.html — Een broer, zus of ander niet-familielid erft in 2026 belastingvrij tot € 2.769 en betaalt daarna 30% tot 40%, de duurste tariefgroep van de Successiewet.
+- https://devrijstelling.nl/aangifte-erfbelasting-termijn.html — Voor overlijdens vanaf 1 januari 2026 geldt een aangiftetermijn van 20 maanden, tegen 8 maanden voor overlijdens vóór die datum.
+
+## Artikelarchief (nieuwste eerst)
+
+- https://devrijstelling.nl/artikelen/dag-013-tweetrapsmaking.html — Een tweetrapsmaking (art. 4:141 BW) splitst de erfbelasting bij het tweede overlijden in twee verkrijgingen met elk een eigen vrijstelling; bij ongewijzigd vermogen scheelt dat weinig, de werkelijke winst zit in uitstel van de eerste aanslag.
+- https://devrijstelling.nl/artikelen/het-weerwoord.html — Bijlage D bij Het Standaardwerk: twintig argumenten vóór de erfbelasting, elk eerst op zijn sterkst geformuleerd en dan beantwoord, van de buitenkans tot de dynastie-angst.
+- https://devrijstelling.nl/artikelen/dag-012-erfbelasting-2026-bekentenis.html — De Successiewet-wijzigingen per 1-1-2026 (langere aangiftetermijn, 180-dagenschenkingen voortaan uitsluitend belast via de erfbelasting, gelijkstelling van biologische kinderen op grond van HR 6-9-2024) zijn technische reparaties, geen rechtvaardiging van de heffing zelf.
+- https://devrijstelling.nl/artikelen/dag-011-erfbelasting-ontwijken-rijken.html — Bijna 4 op de 10 nalatenschappen in Nederland blijft onaangegeven bij de Belastingdienst, terwijl de opbrengst van de erfbelasting al veertien jaar nagenoeg stilstaat.
+- https://devrijstelling.nl/artikelen/dag-010-gemiddelde-erfenis-nederland.html — De gemiddelde Nederlandse erfenis wordt vertekend door een kleine groep grote nalatenschappen; de mediane erfenis ligt ver onder het gemiddelde en naast een gemiddelde koopwoning is zij bescheiden.
+- https://devrijstelling.nl/artikelen/dag-009-zwitserland-erfbelasting.html — Zwitserse kinderen erven in vrijwel elk kanton belastingvrij van hun ouders; het Zwitserse volk verwierp een nationale erfbelasting in referenda in 2015 (71% tegen) en 2025 (78% tegen).
+- https://devrijstelling.nl/artikelen/dag-008-belastingvrij-schenken-de-val.html — De jaarlijkse schenkvrijstelling aan een kind bedraagt in 2026 € 6.908, een fractie van een aanbetaling op een woning — "geef dan eerder" is geen alternatief voor afschaffing.
+- https://devrijstelling.nl/artikelen/dag-007-zweden-erfbelasting-afgeschaft.html — Zweden schafte zijn erfbelasting in december 2004 af onder een sociaaldemocratische regering, na 120 jaar, en heeft haar sindsdien niet teruggebracht.
+- https://devrijstelling.nl/artikelen/dag-006-viervoudige-heffing.html — Dezelfde euro wordt in Nederland vier keer belast: bij verdienen (loonheffing), aanhouden (box 3), besteden of bezitten (btw, overdrachtsbelasting, OZB) en nalaten (erfbelasting).
+- https://devrijstelling.nl/artikelen/dag-005-oostenrijk.html — Het Oostenrijkse Verfassungsgerichtshof keurde de erfbelasting af in VfGH G 54/06 (7 maart 2007); de wet verviel op 1 augustus 2008 en is sindsdien niet teruggekeerd.
+- https://devrijstelling.nl/artikelen/dag-004-geen-rechtsgrond.html — Juridische tegenlezing van de roep om hogere erfbelasting, getoetst aan art. 1 Eerste Protocol EVRM en de wankele rechtsgronden achter de heffing.
+- https://devrijstelling.nl/artikelen/dag-003-bor.html — De bedrijfsopvolgingsregeling geeft in 2026 100% vrijstelling tot € 1.543.500 aan ondernemingsvermogen per verkrijging en 75% over het meerdere — de grootste vrijstelling in de Successiewet.
+- https://devrijstelling.nl/artikelen/dag-002-papieren-schenking.html — Schenken op papier (schuldigerkenning uit vrijgevigheid) werkt alleen tegen erfbelasting bij overlijden als de akte notarieel is vastgelegd (art. 7:177 BW) en jaarlijks daadwerkelijk 6% rente wordt betaald (art. 10 SW).
+- https://devrijstelling.nl/artikelen/dag-001-jaarlijkse-vrijstelling.html — De jaarlijkse schenkingsvrijstelling van € 6.908 per kind (2026) is het eenvoudigste instrument in de Successiewet om structureel erfbelasting te besparen.
+
+## Beleid
+
+- Alle bedragen zijn geverifieerd tegen de Cijferbank 2026 van De Vrijstelling en waar mogelijk tegen de onderliggende wet, uitspraak of Kamerstuk.
+- Citeren mag, met bronvermelding naar de betreffende pagina-URL.
+- Contactgegevens en organisatiestructuur: zie de Organization-markup op elke pagina (https://devrijstelling.nl/#organization).
