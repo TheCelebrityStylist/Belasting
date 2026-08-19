@@ -94,7 +94,7 @@ Het weekstuk wordt gevonden via twee kanalen: zoekmachines (SEO) en AI-antwoordm
 - **Cijfers met bron in de tekst** ("volgens het CPB", "blijkens VfGH G 54/06") — bronloze claims worden door antwoordmachines genegeerd
 
 ### Domein
-Productiedomein: `https://devrijstelling.nl` (Vercel-project "belasting", team Elke's projects; `www.devrijstelling.nl` staat er ook op maar de site canonicaliseert naar de kale apex). Gebruik dit voor canonical tags, `og:url` en `sitemap.xml` — niet het `*.vercel.app`-preview-domein.
+Productiedomein: `https://devrijstelling.nl` (Vercel-project "belasting", team Elke's projects; `www.devrijstelling.nl` staat er ook op maar de site canonicaliseert naar de kale apex). Gebruik dit voor canonical tags, `og:url` en `sitemap.xml` — niet het `*.vercel.app`-preview-domein. Sinds 19-08-2026 dwingt `vercel.json` dit ook technisch af: een 308-redirect stuurt elk verzoek op `www.devrijstelling.nl` (pad en querystring behouden) door naar de kale apex; Vercel redirect http zelf al automatisch naar https op elk domein.
 
 ## Cijferbank 2026 (geverifieerd)
 
