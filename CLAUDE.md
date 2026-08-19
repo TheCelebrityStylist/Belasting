@@ -55,7 +55,7 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 010 — De gemiddelde erfenis vs. de gemiddelde koopwoning (gepubliceerd: dag-010-gemiddelde-erfenis-nederland.html)
 - [x] Dag 011 — Wie betaalt er werkelijk (gepubliceerd: dag-011-erfbelasting-ontwijken-rijken.html)
 - [x] Dag 012 — Erfbelasting 2026: drie wijzigingen, drie bekentenissen (actualiteit, gepubliceerd: dag-012-erfbelasting-2026-bekentenis.html)
-- [ ] Dag 013 — De tweetrapsmaking (instrumenteel stuk, ter afwisseling)
+- [x] Dag 013 — De tweetrapsmaking (gepubliceerd: dag-013-tweetrapsmaking.html)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
 
