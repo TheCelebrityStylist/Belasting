@@ -63,6 +63,7 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 018 — Emigratie en de erfbelasting: de woonplaatsfictie (opinie, gepubliceerd: dag-018-emigratie-vermogen.html)
 - [x] Dag 019 — De miljonairsbelasting en de geschiedenis van drempelverlaging (opinie/actualiteit, gepubliceerd: dag-019-miljonairsbelasting-grens.html; vervolg op dag 014, andere zoekintentie om kannibalisatie te vermijden)
 - [x] Dag 020 — De planningsindustrie: estate planning als toegangsdrempel (opinie, gepubliceerd: dag-020-estate-planning-luxe.html; andere invalshoek dan dag 011/003/016 om kannibalisatie te vermijden)
+- [x] Dag 021 — Pensioen en erfbelasting: pensioenimputatie (instrumenteel/opinie, gepubliceerd: dag-021-pensioen-erfbelasting.html)
 - [ ] Naslag — de dubbele vrijstelling uitdiepen tot een eigen sectie of pagina, als de sectie op vrijstelling-erfbelasting-2026.html vertoningen trekt (GSC 20-8: "dubbele vrijstelling erfbelasting" 22 vertoningen, landde toen nog op de homepage positie ~76)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
