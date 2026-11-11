@@ -65,6 +65,7 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 020 — De planningsindustrie: estate planning als toegangsdrempel (opinie, gepubliceerd: dag-020-estate-planning-luxe.html; andere invalshoek dan dag 011/003/016 om kannibalisatie te vermijden)
 - [x] Dag 021 — Pensioen en erfbelasting: pensioenimputatie (instrumenteel/opinie, gepubliceerd: dag-021-pensioen-erfbelasting.html)
 - [x] Dag 022 — Frankrijk (landenreeks, tegendraads: hoogste toptarief van Europa maar lagere last dan NL tot € 659.000, gepubliceerd: dag-022-frankrijk-erfbelasting.html)
+- [x] Dag 023 — Starters, schenking en de generatiekloof (opinie, gepubliceerd: dag-023-starters-generatiekloof.html)
 - [ ] Naslag — de dubbele vrijstelling uitdiepen tot een eigen sectie of pagina, als de sectie op vrijstelling-erfbelasting-2026.html vertoningen trekt (GSC 20-8: "dubbele vrijstelling erfbelasting" 22 vertoningen, landde toen nog op de homepage positie ~76)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
