@@ -66,6 +66,7 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 021 — Pensioen en erfbelasting: pensioenimputatie (instrumenteel/opinie, gepubliceerd: dag-021-pensioen-erfbelasting.html)
 - [x] Dag 022 — Frankrijk (landenreeks, tegendraads: hoogste toptarief van Europa maar lagere last dan NL tot € 659.000, gepubliceerd: dag-022-frankrijk-erfbelasting.html)
 - [x] Dag 023 — Starters, schenking en de generatiekloof (opinie, gepubliceerd: dag-023-starters-generatiekloof.html)
+- [x] Dag 024 — Open brief aan het kabinet: minderheidskabinet en electoraal mandaat (opinie/actualiteit, open-brief-vorm, gepubliceerd: dag-024-open-brief-mandaat.html; expliciet NIET geschreven als juridische ongrondwettelijkheidsclaim — art. 67 lid 3/81/120 GW bevestigen dat de procedure rechtmatig is, het stuk bekritiseert de legitimiteit, niet de rechtmatigheid)
 - [ ] Naslag — de dubbele vrijstelling uitdiepen tot een eigen sectie of pagina, als de sectie op vrijstelling-erfbelasting-2026.html vertoningen trekt (GSC 20-8: "dubbele vrijstelling erfbelasting" 22 vertoningen, landde toen nog op de homepage positie ~76)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
