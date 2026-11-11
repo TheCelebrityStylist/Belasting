@@ -7,7 +7,7 @@ Doorloop in deze volgorde, sla niets over:
 3. Verifieer met web search elk cijfer, elke vrijstelling, elk arrest en elke buitenlandse regeling die je gaat gebruiken — niets uit het geheugen
 4. Schrijf het artikel als `artikelen/dag-NNN-[zoekwoord-slug].html` volgens de schrijfstandaard én de doelgroepregels (de twijfelaar, niet de fanclub): openingsscène → direct-antwoordalinea (40–60 woorden, citeerbaar) → betoog met steelman → constructief slot → FAQ-blok
 5. SEO/GEO-verpakking afvinken: title ≤60 tekens, meta description 150–160, canonical, og-tags, interne links (manifest + verwant artikel + rekenformulier), Article- en FAQPage-JSON-LD
-6. Werk bij: archiefblok bovenaan `index.html`, regel in `sitemap.xml`, afstrepen in de onderwerpenbank in CLAUDE.md
+6. Werk bij: archiefblok bovenaan `index.html`, regel in `sitemap.xml`, afstrepen in de onderwerpenbank in CLAUDE.md — alle URL's zonder `.html` (zie CLAUDE.md, fout 5), title volgens de zoekwoordtoewijzing (fout 6)
 7. Kwaliteitspoort uit CLAUDE.md: tegenstander-pass, twijfelaar-test, voorlees-test, schrap-pass (15–20% korter), cijfercheck
 8. Commit ("Dag NNN: [titel]") en push naar `main`
 
