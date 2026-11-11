@@ -56,7 +56,8 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 011 — Wie betaalt er werkelijk (gepubliceerd: dag-011-erfbelasting-ontwijken-rijken.html)
 - [x] Dag 012 — Erfbelasting 2026: drie wijzigingen, drie bekentenissen (actualiteit, gepubliceerd: dag-012-erfbelasting-2026-bekentenis.html)
 - [x] Dag 013 — De tweetrapsmaking (gepubliceerd: dag-013-tweetrapsmaking.html)
-- [ ] Dag 014 — Het afvullegaat (GSC 20-8: 7 vertoningen, positie 71, nog geen pagina; instrumenteel stuk, aansluitend op dag 013)
+- [x] Dag 014 — De miljonairsbelasting (actualiteit, gepubliceerd: dag-014-millionairsbelasting.html; stemming Tweede Kamer 12-11-2026, uitslag nog niet bekend bij publicatie — bij een volgende update checken en eventueel dateModified/content bijwerken)
+- [ ] Dag 015 — Het afvullegaat (GSC 20-8: 7 vertoningen, positie 71, nog geen pagina; instrumenteel stuk, aansluitend op dag 013)
 - [ ] Naslag — de dubbele vrijstelling uitdiepen tot een eigen sectie of pagina, als de sectie op vrijstelling-erfbelasting-2026.html vertoningen trekt (GSC 20-8: "dubbele vrijstelling erfbelasting" 22 vertoningen, landde toen nog op de homepage positie ~76)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
