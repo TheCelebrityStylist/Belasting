@@ -60,6 +60,7 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 015 — Het afvullegaat (gepubliceerd: dag-015-afvullegaat.html)
 - [x] Dag 016 — Boerenbedrijf, BOR en de agrarische erfbelasting (opinie, gepubliceerd: dag-016-boeren-bedrijfsopvolging.html)
 - [x] Dag 017 — Italië (landenreeks, gepubliceerd: dag-017-italie-erfbelasting.html)
+- [x] Dag 018 — Emigratie en de erfbelasting: de woonplaatsfictie (opinie, gepubliceerd: dag-018-emigratie-vermogen.html)
 - [ ] Naslag — de dubbele vrijstelling uitdiepen tot een eigen sectie of pagina, als de sectie op vrijstelling-erfbelasting-2026.html vertoningen trekt (GSC 20-8: "dubbele vrijstelling erfbelasting" 22 vertoningen, landde toen nog op de homepage positie ~76)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
