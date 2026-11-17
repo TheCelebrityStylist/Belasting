@@ -67,7 +67,9 @@ Kern: afschaffing. Niet verhogen, niet hervormen — afschaffen. De dragende arg
 - [x] Dag 022 — Frankrijk (landenreeks, tegendraads: hoogste toptarief van Europa maar lagere last dan NL tot € 659.000, gepubliceerd: dag-022-frankrijk-erfbelasting.html)
 - [x] Dag 023 — Starters, schenking en de generatiekloof (opinie, gepubliceerd: dag-023-starters-generatiekloof.html)
 - [x] Dag 024 — Open brief aan het kabinet: minderheidskabinet en electoraal mandaat (opinie/actualiteit, open-brief-vorm, gepubliceerd: dag-024-open-brief-mandaat.html; expliciet NIET geschreven als juridische ongrondwettelijkheidsclaim — art. 67 lid 3/81/120 GW bevestigen dat de procedure rechtmatig is, het stuk bekritiseert de legitimiteit, niet de rechtmatigheid)
+- [x] Dag 025 — Noorwegen (landenreeks, zelf gekozen door de wekelijkse scheduled task omdat de onderwerpenbank leeg was — Noorwegen stond al in de dragende argumenten hierboven maar had nog geen eigen artikel; gepubliceerd: dag-025-noorwegen-erfbelasting.html)
 - [ ] Naslag — de dubbele vrijstelling uitdiepen tot een eigen sectie of pagina, als de sectie op vrijstelling-erfbelasting-2026.html vertoningen trekt (GSC 20-8: "dubbele vrijstelling erfbelasting" 22 vertoningen, landde toen nog op de homepage positie ~76)
+- [ ] (onderwerpenbank leeg op 17-11-2026 — de wekelijkse scheduled task kiest vanaf nu zelf een onderwerp per CLAUDE.md §Wekelijkse publicatieflow punt 2, tenzij hier weer een concreet onderwerp wordt toegevoegd)
 
 Instrumentele stukken (dag 001–003-stijl) blijven de afwisseling: zij bewijzen de expertise waarop de opinie drijft.
 
